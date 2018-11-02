@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2018/05/21/git/">
+    <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2018/11/02/一、注册github账号并新建一个仓库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tang">
@@ -333,7 +333,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/21/git/" itemprop="url">git</a></h1>
+                <a class="post-title-link" href="/2018/11/02/一、注册github账号并新建一个仓库/" itemprop="url">一、注册github账号并新建一个仓库</a></h1>
         
 
         <div class="post-meta">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-21T10:43:24+08:00">
-                2018-05-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T17:21:02+08:00">
+                2018-11-02
               </time>
             
 
@@ -407,7 +407,13 @@
       
         
           
-            <h1 id="create-git"><a href="#create-git" class="headerlink" title="create git"></a>create git</h1>
+            <ol>
+<li>注册github账号，网址<br><blockquote><p><a href="https://github.com/join" target="_blank" rel="noopener">https://github.com/join</a></p>
+</blockquote>,如图：<br><img src="/images/git1.png" alt="“图片描述”"></li>
+<li>登录并新建一个仓库，如图（共2张）：<br><img src="/images/git2.png" alt="“图片描述”"><br><img src="/images/git3.png" alt="“图片描述”"></li>
+<li>仓库创建完成，如图：<br><img src="/images/git4.png" alt="“图片描述”"></li>
+</ol>
+
           
         
       
@@ -455,7 +461,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2018/05/19/about1/">
+    <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2018/11/02/二、搭建本地git环境并连接仓库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tang">
@@ -474,7 +480,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/19/about1/" itemprop="url">about1</a></h1>
+                <a class="post-title-link" href="/2018/11/02/二、搭建本地git环境并连接仓库/" itemprop="url">二、安装本地git环境并连接仓库</a></h1>
         
 
         <div class="post-meta">
@@ -486,8 +492,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T15:54:40+08:00">
-                2018-05-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T16:32:53+08:00">
+                2018-11-02
               </time>
             
 
@@ -496,6 +502,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -526,7 +554,21 @@
       
         
           
-            
+            <ol>
+<li>下载对应系统及系统位数的git安装到电脑,<blockquote><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p>
+</blockquote></li>
+<li>安装好了git通过鼠标右键，单击 <code>git bash here</code><br><img src="/images/git01.png" alt="“图片描述”"><br>打开git命令窗口,<br><img src="/images/git02.png" alt="“图片描述”"></li>
+<li>配置本地的git账号，输完一句一个回车，共两个回车<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的名字&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+具体配置如图：<br><img src="/images/git03.png" alt="“图片描述”"></li>
+<li>配置ssh密钥。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+输入完成，按两个回车，如图：<br><img src="/images/git04.png" alt="“图片描述”"></li>
+<li>获取公钥<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+如图：<br><img src="/images/git05.png" alt="“图片描述”"><br>复制<code>ssh-rsa</code>后面的一段字符串。</li>
+<li>添加公钥到github仓库。<br>登录github，点击头像-&gt;settings,接下来操作如下图：<br><img src="/images/git06.png" alt="“图片描述”"><br>title：打个标记，<br>Key：粘贴刚才复制的那一段字符串。<br><img src="/images/git07.png" alt="“图片描述”"></li>
+<li>连接自己创建的仓库。<br>点击头像-&gt;Your repositories,如图：<br><img src="/images/git08.png" alt="“图片描述”"><br>依次输入红框中的代码即可连接到<code>first</code>仓库。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin https://github.com/CoooooLer/first.git</span><br></pre></td></tr></table></figure>
+<img src="/images/git09.png" alt="“图片描述”"></li>
+</ol>
+
           
         
       
@@ -593,7 +635,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/19/404/" itemprop="url">404</a></h1>
+                <a class="post-title-link" href="/2018/05/19/404/" itemprop="url">404...</a></h1>
         
 
         <div class="post-meta">
@@ -646,244 +688,7 @@
         
           
             
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2018/05/19/tag/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CoooooLer">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/19/tag/" itemprop="url">tag</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T15:53:41+08:00">
-                2018-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2018/05/19/about/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CoooooLer">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/19/about/" itemprop="url">about</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T15:50:28+08:00">
-                2018-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
+<html lang="en"><br><head><br>    <meta charset="UTF-8"><br>    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><br>    <meta http-equiv="X-UA-Compatible" content="ie=edge"><br></head><br><body><br><img src="/2018/05/19/404/images/404_3.jpg" alt="" style="width: 600px;"><br><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body><br></html>
           
         
       
@@ -968,7 +773,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -990,7 +795,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
