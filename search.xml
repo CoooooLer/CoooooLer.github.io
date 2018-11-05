@@ -3,7 +3,15 @@
   <entry>
     <title><![CDATA[sublime text3 手动安装插件]]></title>
     <url>%2F2018%2F11%2F05%2Fpage%2F</url>
-    <content type="text"><![CDATA[打开sublime，菜单栏点击preference-&gt;package control输入install package安装插件出现错误时，就需要自己手动安装插件了。 菜单栏点击preference-&gt;browse packages打开安装插件的文件夹，里面默认只有一个user文件夹。 打开github根据插件名搜索需要安装的插件并下载，把下载的文件解压出来放到刚才打开那个packages文件夹下，重启sublime方可生效。下面以SublimeLinter插件为例。 下面就是放在preference-&gt;browse packages下packages文件夹中的插件。 Ps：附上图上所有插件在github上的下载地址。emmetgithub.com/sergeche/emmet-sublime SideBarEnhancementsgithub.com/SideBarEnhancements-org/SideBarEnhancements slap-editorgithub.com/slap-editor/slap Sublime-Better-Completiongithub.com/Pleasurazy/Sublime-Better-Completion SublimeLintergithub.com/SublimeLinter/SublimeLinter End]]></content>
+    <content type="text"><![CDATA[打开sublime，菜单栏点击preference-&gt;package control输入install package安装插件出现错误时，就需要自己手动安装插件了。 菜单栏点击preference-&gt;browse packages打开安装插件的文件夹，里面默认只有一个user文件夹。 打开github根据插件名搜索需要安装的插件并下载，把下载的文件解压出来放到刚才打开那个packages文件夹下，重启sublime方可生效。下面以SublimeLinter插件为例。 下面就是放在preference-&gt;browse packages下packages文件夹中的插件。 Ps：附上图上所有插件在github上的下载地址。emmetgithub.com/sergeche/emmet-sublime SideBarEnhancementsgithub.com/SideBarEnhancements-org/SideBarEnhancements sublime_terminalgithub.com/wbond/sublime_terminal Sublime-Better-Completiongithub.com/Pleasurazy/Sublime-Better-Completion SublimeLintergithub.com/SublimeLinter/SublimeLinter End]]></content>
+      <categories>
+        <category>sublime的使用技巧</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[sublime插件sublime_terminal]]></title>
+    <url>%2F2018%2F11%2F05%2Fsublime%E6%8F%92%E4%BB%B6sublime-terminal%2F</url>
+    <content type="text"><![CDATA[sublime安装了sublime terminal插件可以实现快捷键打开浏览器。 安装sublime terminal插件。打开sublime，菜单栏点击preference-&gt;browse packages打开安装插件的文件夹，里面默认只有一个user文件夹。 sublime_terminalgithub.com/wbond/sublime_terminal下载sublime terminal解压出来放到刚才打开那个packages文件夹下。 菜单栏点击preference-&gt;package settings-&gt;terminal-&gt;key bindings-user，输入以下代码块ctrl+s保存即可：1234567891011[ &#123; "keys": ["ctrl+shift+c"], "command": "copy_path" &#125;, //chrome &#123; "keys": ["f2"], "command": "side_bar_files_open_with", "args": &#123; "paths": [], "application": "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe", "extensions":".*" &#125; &#125;] 效果如图： Ps:application后面的值是浏览器安装的路径，f2是打开浏览器的快捷键。End]]></content>
       <categories>
         <category>sublime的使用技巧</category>
       </categories>
