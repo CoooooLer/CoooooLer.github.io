@@ -304,6 +304,150 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2019/01/05/获取当前下拉列表框的值/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CoooooLer">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/获取当前下拉列表框的值/" itemprop="url">获取当前下拉列表框的值</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-05T15:43:11+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/layui笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">layui笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">lay-verify</span>=<span class="string">"required"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"/up_passkey?id=10000&amp;passkey="</span>&gt;</span>passKey<span class="tag">&lt;/<span class="name">option</span>&gt;</span>  <span class="comment">&lt;!-- 可以多写几个option，这里写一个方便演示。--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">form.on(<span class="string">"select"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;   </span><br><span class="line">    <span class="keyword">var</span> value = data.value;   <span class="comment">//`value`值就是select的`/up_passkey?id=10000&amp;passkey=`</span></span><br><span class="line">    <span class="keyword">var</span> index = data.elem[ret.elem.selectedIndex].text;  <span class="comment">//`index`就是select的`passKey` </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>多个下拉列表框同样适用，<code>form.on(……)</code>只获取当前下拉列表框的值。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://CoooooLer.github.io/2018/11/27/牛-人类简史/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -826,7 +970,7 @@
         
           
             <p>比如我想发布一篇名为<code>读《三体》</code>的文章，并把这篇文章归纳到<code>读书</code>分类。</p>
-<h3 id="start"><a href="#start" class="headerlink" title="start"></a>start</h3><p>在HEXO的目录下，<code>shift键</code>按住不放，空白处鼠标右击选择打开命令窗口；如果安装了git，可以直接右击打开git的命令窗口。下面以git的命令窗口做演示：<br>输入<code>hexo new &quot;读《三体》&quot;</code><br><img src="/images/hexo01.png" alt="“图片描述”"><br>在HEXO的根目录下会生成相应的文件：<br><img src="/images/hexo02.png" alt="“图片描述”"><br>用编辑器打开<code>读《三体》.md</code>这个文件，并在tags下面添加一行<code>categories: 读书</code>，此时这个文件便属于<code>读书</code>这个分类了。在这个文件中写点内容：给时光以生命，给岁月以文明。<br><img src="/images/hexo03.png" alt="“图片描述”"><br>在git的命令窗口中分两次输入执行下面的语句：<br><code>hexo g</code><br><code>hexo s</code><br>打开博客看效果<br><img src="/images/hexo04.png" alt="“图片描述”"><br><img src="/images/hexo05.png" alt="“图片描述”"><br><img src="/images/hexo06.png" alt="“图片描述”"></p>
+<h3 id="start"><a href="#start" class="headerlink" title="start"></a>start</h3><p>在HEXO的目录下，<code>shift键</code>按住不放，空白处鼠标右击选择打开命令窗口；如果安装了git，可以直接右击打开git的命令窗口。下面以git的命令窗口做演示：<br>输入<code>hexo new &quot;读《三体》&quot;</code><br><img src="/images/hexo01.png" alt="“图片描述”"><br>在HEXO的根目录下会生成相应的文件：<br><img src="/images/hexo02.png" alt="“图片描述”"><br>用编辑器打开<code>读《三体》.md</code>这个文件，并在tags下面添加一行<code>categories: 读书</code>，此时这个文件便属于<code>读书</code>这个分类了。在这个文件中写点内容：给时光以生命，给岁月以文明。<br><img src="/images/hexo03.png" alt="“图片描述”"><br>在git的命令窗口中分两次输入执行下面的语句：<br><code>hexo g</code><br><code>hexo s</code><br>在浏览器输入<code>http://127.0.0.1:4000</code>打开博客看效果<br><img src="/images/hexo04.png" alt="“图片描述”"><br><img src="/images/hexo05.png" alt="“图片描述”"><br><img src="/images/hexo06.png" alt="“图片描述”"></p>
 <h3 id="end"><a href="#end" class="headerlink" title="end"></a>end</h3>
           
         
@@ -1657,7 +1801,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1668,7 +1812,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index-1.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1726,7 +1870,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

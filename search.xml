@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[获取当前下拉列表框的值]]></title>
+    <url>%2F2019%2F01%2F05%2F%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8%E6%A1%86%E7%9A%84%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[123&lt;select name="" lay-verify="required"&gt; &lt;option value="/up_passkey?id=10000&amp;passkey="&gt;passKey&lt;/option&gt; &lt;!-- 可以多写几个option，这里写一个方便演示。--&gt;&lt;/select&gt; 1234form.on("select", function (data) &#123; var value = data.value; //`value`值就是select的`/up_passkey?id=10000&amp;passkey=` var index = data.elem[ret.elem.selectedIndex].text; //`index`就是select的`passKey` &#125; 多个下拉列表框同样适用，form.on(……)只获取当前下拉列表框的值。]]></content>
+      <categories>
+        <category>layui笔记</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[牛--人类简史]]></title>
     <url>%2F2018%2F11%2F27%2F%E7%89%9B-%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2%2F</url>
     <content type="text"><![CDATA[一头在现代化畜牧场里的小牛。小牛出生后立即与母亲分开，关在一个不比身体大多少的笼子里。小牛得在这里度过一辈子，但它的一辈子平均也只有大约4个月。它这一辈子再也不会离开笼子，从没有机会和其他小牛玩，甚至连走路的机会也被剥夺，这一切都是为了避免它的肌肉因运动而变硬。肌肉越柔软，牛排也就越鲜嫩、多汁。于是，这只小牛第一次有机会走路、伸展筋骨、遇见其他小牛的时候，也就是在前往屠宰场的路上。就演化而言，牛可能是有史以来最成功的动物。但同时，它们也是地球上生活最悲惨的动物。]]></content>
@@ -27,7 +35,7 @@
   <entry>
     <title><![CDATA[用hexo发布一篇分类文章]]></title>
     <url>%2F2018%2F11%2F26%2Fhexo%2F</url>
-    <content type="text"><![CDATA[比如我想发布一篇名为读《三体》的文章，并把这篇文章归纳到读书分类。 start在HEXO的目录下，shift键按住不放，空白处鼠标右击选择打开命令窗口；如果安装了git，可以直接右击打开git的命令窗口。下面以git的命令窗口做演示：输入hexo new &quot;读《三体》&quot;在HEXO的根目录下会生成相应的文件：用编辑器打开读《三体》.md这个文件，并在tags下面添加一行categories: 读书，此时这个文件便属于读书这个分类了。在这个文件中写点内容：给时光以生命，给岁月以文明。在git的命令窗口中分两次输入执行下面的语句：hexo ghexo s打开博客看效果 end]]></content>
+    <content type="text"><![CDATA[比如我想发布一篇名为读《三体》的文章，并把这篇文章归纳到读书分类。 start在HEXO的目录下，shift键按住不放，空白处鼠标右击选择打开命令窗口；如果安装了git，可以直接右击打开git的命令窗口。下面以git的命令窗口做演示：输入hexo new &quot;读《三体》&quot;在HEXO的根目录下会生成相应的文件：用编辑器打开读《三体》.md这个文件，并在tags下面添加一行categories: 读书，此时这个文件便属于读书这个分类了。在这个文件中写点内容：给时光以生命，给岁月以文明。在git的命令窗口中分两次输入执行下面的语句：hexo ghexo s在浏览器输入http://127.0.0.1:4000打开博客看效果 end]]></content>
       <categories>
         <category>hexo</category>
       </categories>
