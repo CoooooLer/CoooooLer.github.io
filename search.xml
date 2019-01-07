@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[设置table水平和垂直滚动]]></title>
+    <url>%2F2019%2F01%2F07%2F%E8%AE%BE%E7%BD%AEtable%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E6%BB%9A%E5%8A%A8%2F</url>
+    <content type="text"><![CDATA[在table上添加一个div盒子，设置如下即可。12345&lt;div id="table-box" style="overflow:auto;width:100%"&gt; &lt;table width="auto" style="white-space:nowrap"&gt; …… &lt;/table&gt;&lt;/div&gt; 用jquery监听屏幕高度调整table-box盒子的高度，让垂直滚动条自适应屏幕高度。123456var h = $(window).height()-200; //200px指table-box盒子以外其他div盒子的高度总和。 $('#table-box').css(&#123;'height': h&#125;); window.onresize = function () &#123; h = $(window).height()-200; $('#table-box').css(&#123;'height': h&#125;); &#125; end]]></content>
+      <categories>
+        <category>layui笔记</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[获取当前下拉列表框的值]]></title>
     <url>%2F2019%2F01%2F05%2F%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8%E6%A1%86%E7%9A%84%E5%80%BC%2F</url>
     <content type="text"><![CDATA[123&lt;select name="" lay-verify="required"&gt; &lt;option value="/up_passkey?id=10000&amp;passkey="&gt;passKey&lt;/option&gt; &lt;!-- 可以多写几个option，这里写一个方便演示。--&gt;&lt;/select&gt; 1234form.on("select", function (data) &#123; var value = data.value; //`value`值就是select的`/up_passkey?id=10000&amp;passkey=` var index = data.elem[ret.elem.selectedIndex].text; //`index`就是select的`passKey` &#125; 多个下拉列表框同样适用，form.on(……)只获取当前下拉列表框的值。]]></content>
