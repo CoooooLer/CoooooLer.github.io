@@ -3,9 +3,9 @@
   <entry>
     <title><![CDATA[动态添加select的option]]></title>
     <url>%2F2019%2F01%2F19%2F%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0select%E7%9A%84option%2F</url>
-    <content type="text"><![CDATA[准备一个下拉选择框。12345&lt;div class="layui-input-block"&gt; &lt;select name="" id="card-select" lay-verify="required"&gt; &lt;option value="0"&gt;one&lt;/option&gt; &lt;/select&gt;&lt;/div&gt; 用jquery的id选择器清空select的内容。$(&quot;#card-select&quot;).empty(); ajax获取后台数据，循环拼接成字符串。123456789101112……success: function(ret) &#123; let data = JSON.parse(ret); let str = ''; $(data).each(function (i,n) &#123; str += ` &lt;option value=$&#123;n.bankNum&#125;&gt;$&#123;n.bankName&#125;/$&#123;n.cardName&#125;/$&#123;n.bankNum&#125;&lt;/option&gt; ` &#125;); $('#card-select').append(str); form.render('select');&#125; end]]></content>
+    <content type="text"><![CDATA[准备一个下拉选择框。12345&lt;div class="layui-input-block"&gt; &lt;select name="" id="card-select" lay-verify="required"&gt; &lt;option value="0"&gt;one&lt;/option&gt; &lt;/select&gt;&lt;/div&gt; 用jquery的id选择器清空select的内容。$(&quot;#card-select&quot;).empty(); ajax获取后台数据，循环拼接成字符串。12345678910111213……success: function(ret) &#123; let data = JSON.parse(ret); let str = ''; $(data).each(function (i,n) &#123; console.log(n); str += ` &lt;option value=$&#123;n.bankNum&#125;&gt;$&#123;n.bankName&#125;/$&#123;n.cardName&#125;/$&#123;n.bankNum&#125;&lt;/option&gt; ` &#125;); $('#card-select').append(str); form.render('select');&#125; end]]></content>
       <categories>
-        <category>layui</category>
+        <category>layui笔记</category>
       </categories>
   </entry>
   <entry>
