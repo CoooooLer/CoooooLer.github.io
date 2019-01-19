@@ -3,15 +3,15 @@
   <entry>
     <title><![CDATA[动态添加select的option]]></title>
     <url>%2F2019%2F01%2F19%2F%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0select%E7%9A%84option%2F</url>
-    <content type="text"><![CDATA[准备一个下拉选择框。12345&lt;div class="layui-input-block"&gt; &lt;select name="" id="card-select" lay-verify="required"&gt; &lt;option value="0"&gt;one&lt;/option&gt; &lt;/select&gt;&lt;/div&gt; 用jquery的id选择器清空select的内容。$(&quot;#card-select&quot;).empty(); ajax获取后台数据，循环拼接成字符串。12345678910111213……success: function(ret) &#123; let data = JSON.parse(ret); let str = ''; $(data).each(function (i,n) &#123; console.log(n); str += ` &lt;option value=$&#123;n.bankNum&#125;&gt;$&#123;n.bankName&#125;/$&#123;n.cardName&#125;/$&#123;n.bankNum&#125;&lt;/option&gt; ` &#125;); $('#card-select').append(str); form.render('select');&#125; end]]></content>
+    <content type="text"><![CDATA[准备一个下拉选择框。12345&lt;div class="layui-input-block"&gt; &lt;select name="" id="card-select" lay-verify="required"&gt; &lt;option value="0"&gt;one&lt;/option&gt; &lt;/select&gt;&lt;/div&gt; 用jquery的id选择器清空select的内容。$(&quot;#card-select&quot;).empty(); ajax获取后台数据，循环拼接成字符串。英文状态下点击tab上面的键两下组成一对结构符。1234567891011……success: function(ret) &#123; let data = JSON.parse(ret); let str = ''; $(data).each(function (i,n) &#123; console.log(n); str += `&lt;option value=$&#123;n.bankNum&#125;&gt;$&#123;n.bankName&#125;/$&#123;n.cardName&#125;/$&#123;n.bankNum&#125;&lt;/option&gt;` //在结构符中拼接字符串 &#125;); $('#card-select').append(str); form.render('select');&#125; end]]></content>
       <categories>
         <category>layui笔记</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[设置table水平和垂直滚动]]></title>
+    <title><![CDATA[设置table水平滚动条和垂直滚动条]]></title>
     <url>%2F2019%2F01%2F07%2F%E8%AE%BE%E7%BD%AEtable%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E6%BB%9A%E5%8A%A8%2F</url>
-    <content type="text"><![CDATA[在table上添加一个div盒子，设置如下即可。12345&lt;div id="table-box" style="overflow:auto;width:100%"&gt; &lt;table width="auto" style="white-space:nowrap"&gt; …… &lt;/table&gt;&lt;/div&gt; 用jquery监听屏幕高度调整table-box盒子的高度，让垂直滚动条自适应屏幕高度。123456var h = $(window).height()-200; //200px指table-box盒子以外其他div盒子的高度总和。 $('#table-box').css(&#123;'height': h&#125;); window.onresize = function () &#123; h = $(window).height()-200; $('#table-box').css(&#123;'height': h&#125;); &#125; end]]></content>
+    <content type="text"><![CDATA[在table上添加一个div盒子，添加如下的style就会出现水平滚动条和垂直滚动条。12345&lt;div id="table-box" style="overflow:auto;width:100%"&gt; &lt;table width="auto" style="white-space:nowrap"&gt; …… &lt;/table&gt;&lt;/div&gt; 改造一下，用jquery监听屏幕高度调整table-box盒子的高度，让垂直滚动条自适应屏幕高度。123456var h = $(window).height()-200; //200px指table-box盒子以外其他div盒子的高度总和。 $('#table-box').css(&#123;'height': h&#125;); window.onresize = function () &#123; h = $(window).height()-200; $('#table-box').css(&#123;'height': h&#125;); &#125; end]]></content>
       <categories>
         <category>layui笔记</category>
       </categories>

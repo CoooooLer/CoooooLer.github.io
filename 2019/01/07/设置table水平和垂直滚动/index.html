@@ -77,17 +77,17 @@
 
 
 
-<meta name="description" content="在table上添加一个div盒子，设置如下即可。12345&amp;lt;div id=&quot;table-box&quot; style=&quot;overflow:auto;width:100%&quot;&amp;gt;    &amp;lt;table width=&quot;auto&quot; style=&quot;white-space:nowrap&quot;&amp;gt;        ……              &amp;lt;/table&amp;gt;&amp;lt;/div&amp;gt; 用jqu">
+<meta name="description" content="在table上添加一个div盒子，添加如下的style就会出现水平滚动条和垂直滚动条。12345&amp;lt;div id=&quot;table-box&quot; style=&quot;overflow:auto;width:100%&quot;&amp;gt;    &amp;lt;table width=&quot;auto&quot; style=&quot;white-space:nowrap&quot;&amp;gt;        ……              &amp;lt;/table&amp;g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设置table水平和垂直滚动">
+<meta property="og:title" content="设置table水平滚动条和垂直滚动条">
 <meta property="og:url" content="http://CoooooLer.github.io/2019/01/07/设置table水平和垂直滚动/index.html">
 <meta property="og:site_name" content="CoooooLer">
-<meta property="og:description" content="在table上添加一个div盒子，设置如下即可。12345&amp;lt;div id=&quot;table-box&quot; style=&quot;overflow:auto;width:100%&quot;&amp;gt;    &amp;lt;table width=&quot;auto&quot; style=&quot;white-space:nowrap&quot;&amp;gt;        ……              &amp;lt;/table&amp;gt;&amp;lt;/div&amp;gt; 用jqu">
+<meta property="og:description" content="在table上添加一个div盒子，添加如下的style就会出现水平滚动条和垂直滚动条。12345&amp;lt;div id=&quot;table-box&quot; style=&quot;overflow:auto;width:100%&quot;&amp;gt;    &amp;lt;table width=&quot;auto&quot; style=&quot;white-space:nowrap&quot;&amp;gt;        ……              &amp;lt;/table&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T05:51:59.032Z">
+<meta property="og:updated_time" content="2019-01-19T08:46:00.561Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设置table水平和垂直滚动">
-<meta name="twitter:description" content="在table上添加一个div盒子，设置如下即可。12345&amp;lt;div id=&quot;table-box&quot; style=&quot;overflow:auto;width:100%&quot;&amp;gt;    &amp;lt;table width=&quot;auto&quot; style=&quot;white-space:nowrap&quot;&amp;gt;        ……              &amp;lt;/table&amp;gt;&amp;lt;/div&amp;gt; 用jqu">
+<meta name="twitter:title" content="设置table水平滚动条和垂直滚动条">
+<meta name="twitter:description" content="在table上添加一个div盒子，添加如下的style就会出现水平滚动条和垂直滚动条。12345&amp;lt;div id=&quot;table-box&quot; style=&quot;overflow:auto;width:100%&quot;&amp;gt;    &amp;lt;table width=&quot;auto&quot; style=&quot;white-space:nowrap&quot;&amp;gt;        ……              &amp;lt;/table&amp;g">
 
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <title>设置table水平和垂直滚动 | CoooooLer</title>
+  <title>设置table水平滚动条和垂直滚动条 | CoooooLer</title>
   
 
 
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">设置table水平和垂直滚动</h1>
+          <h1 class="post-title" itemprop="name headline">设置table水平滚动条和垂直滚动条</h1>
         
 
         <div class="post-meta">
@@ -393,8 +393,8 @@
       
 
       
-        <p>在<code>table</code>上添加一个<code>div</code>盒子，设置如下即可。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"table-box"</span> <span class="attr">style</span>=<span class="string">"overflow:auto;width:100%"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"auto"</span> <span class="attr">style</span>=<span class="string">"white-space:nowrap"</span>&gt;</span></span><br><span class="line">        ……          </span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>用jquery监听屏幕高度调整<code>table-box</code>盒子的高度，让垂直滚动条自适应屏幕高度。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> h = $(<span class="built_in">window</span>).height()<span class="number">-200</span>;  <span class="comment">//200px指table-box盒子以外其他div盒子的高度总和。</span></span><br><span class="line">    $(<span class="string">'#table-box'</span>).css(&#123;<span class="string">'height'</span>: h&#125;);</span><br><span class="line">    <span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        h = $(<span class="built_in">window</span>).height()<span class="number">-200</span>;</span><br><span class="line">        $(<span class="string">'#table-box'</span>).css(&#123;<span class="string">'height'</span>: h&#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <p>在<code>table</code>上添加一个<code>div</code>盒子，添加如下的<code>style</code>就会出现水平滚动条和垂直滚动条。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"table-box"</span> <span class="attr">style</span>=<span class="string">"overflow:auto;width:100%"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"auto"</span> <span class="attr">style</span>=<span class="string">"white-space:nowrap"</span>&gt;</span></span><br><span class="line">        ……          </span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>改造一下，用jquery监听屏幕高度调整<code>table-box</code>盒子的高度，让垂直滚动条自适应屏幕高度。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> h = $(<span class="built_in">window</span>).height()<span class="number">-200</span>;  <span class="comment">//200px指table-box盒子以外其他div盒子的高度总和。</span></span><br><span class="line">    $(<span class="string">'#table-box'</span>).css(&#123;<span class="string">'height'</span>: h&#125;);</span><br><span class="line">    <span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        h = $(<span class="built_in">window</span>).height()<span class="number">-200</span>;</span><br><span class="line">        $(<span class="string">'#table-box'</span>).css(&#123;<span class="string">'height'</span>: h&#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p>end</p>
 
       
